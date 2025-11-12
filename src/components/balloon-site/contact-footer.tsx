@@ -44,7 +44,7 @@ export function ContactFooter() {
   return (
     <>
       {/* Contact Form Section */}
-      <section className="py-20 bg-white" id="contact">
+      <section className="py-20 bg-white scroll-mt-20" id="contact">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[hsl(var(--brand-navy))] mb-4">
