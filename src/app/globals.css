@@ -1,97 +1,114 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ============================================
+ * WHERE BALLOONS MAKE MEMORIES - DESIGN SYSTEM
+ * Brand Colors: Navy #001F3F, White #FFFFFF, Black #000000, Soft Pink #F8C6D0
+ * ============================================ */
 
 :root {
-  /* Pure white background with crisp black text */
-  --background: 0 0% 100%;
-  --foreground: 0 0% 0%;
+  /* Brand Color System - Where Balloons Make Memories */
+  --brand-navy: 210 100% 12%;        /* #001F3F - Headers, footers, primary dark */
+  --brand-white: 0 0% 100%;          /* #FFFFFF - Content areas, cards */
+  --brand-black: 0 0% 0%;            /* #000000 - Body text */
+  --brand-pink: 345 76% 87%;         /* #F8C6D0 - CTA buttons, accents */
+  --brand-pink-light: 345 76% 95%;   /* Light pink backgrounds */
+  --brand-pink-tint: 345 76% 97%;    /* Subtle pink tints */
 
-  /* Clean white cards with black text */
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 0%;
+  /* Mapped to theme variables */
+  --background: var(--brand-white);
+  --foreground: var(--brand-black);
 
-  /* Popovers with white background */
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 0%;
+  /* Cards - White with subtle shadow */
+  --card: var(--brand-white);
+  --card-foreground: var(--brand-black);
 
-  /* Primary: Black with white text */
-  --primary: 0 0% 0%;
-  --primary-foreground: 0 0% 100%;
+  /* Popovers */
+  --popover: var(--brand-white);
+  --popover-foreground: var(--brand-black);
 
-  /* Secondary: Light gray background with black text */
-  --secondary: 0 0% 97%;
-  --secondary-foreground: 0 0% 0%;
+  /* Primary: Navy blue for headers/footers */
+  --primary: var(--brand-navy);
+  --primary-foreground: var(--brand-white);
 
-  /* Muted: Subtle gray with darker text */
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 40%;
+  /* Secondary: Soft pink for accents */
+  --secondary: var(--brand-pink);
+  --secondary-foreground: var(--brand-white);
 
-  /* Accent: Light gray */
-  --accent: 0 0% 96%;
-  --accent-foreground: 0 0% 0%;
+  /* Muted: Light backgrounds */
+  --muted: var(--brand-pink-tint);
+  --muted-foreground: 210 15% 40%;
 
-  /* Destructive: Clean red */
+  /* Accent: Pink for CTAs and highlights */
+  --accent: var(--brand-pink);
+  --accent-foreground: var(--brand-white);
+
+  /* Destructive: Red for errors */
   --destructive: 0 70% 50%;
-  --destructive-foreground: 0 0% 100%;
+  --destructive-foreground: var(--brand-white);
 
   /* Borders: Subtle gray */
   --border: 0 0% 90%;
   --input: 0 0% 90%;
-  --ring: 0 0% 0%;
+  --ring: var(--brand-pink);
 
-  /* Minimal rounded corners */
-  --radius: 0.375rem;
+  /* Border Radius - 8px standard */
+  --radius: 0.5rem;
 
-  /* Sidebar: Clean white with black text */
-  --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 0 0% 0%;
-  --sidebar-primary: 0 0% 0%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 0 0% 96%;
-  --sidebar-accent-foreground: 0 0% 0%;
-  --sidebar-border: 0 0% 90%;
-  --sidebar-ring: 0 0% 0%;
+  /* Sidebar (if needed) */
+  --sidebar-background: var(--brand-navy);
+  --sidebar-foreground: var(--brand-white);
+  --sidebar-primary: var(--brand-pink);
+  --sidebar-primary-foreground: var(--brand-white);
+  --sidebar-accent: 210 100% 20%;
+  --sidebar-accent-foreground: var(--brand-white);
+  --sidebar-border: 210 50% 25%;
+  --sidebar-ring: var(--brand-pink);
+
+  /* Typography Variables */
+  --font-script: 'Pacifico', cursive;
+  --font-display: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 .dark {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
+  /* Dark mode uses same brand colors with adjusted contrast */
+  --background: var(--brand-navy);
+  --foreground: var(--brand-white);
 
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
+  --card: 210 100% 15%;
+  --card-foreground: var(--brand-white);
 
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
+  --popover: 210 100% 15%;
+  --popover-foreground: var(--brand-white);
 
-  --primary: 210 40% 98%;
-  --primary-foreground: 222.2 47.4% 11.2%;
+  --primary: var(--brand-pink);
+  --primary-foreground: var(--brand-navy);
 
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
+  --secondary: 210 100% 20%;
+  --secondary-foreground: var(--brand-white);
 
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
+  --muted: 210 50% 25%;
+  --muted-foreground: 210 15% 70%;
 
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
+  --accent: var(--brand-pink);
+  --accent-foreground: var(--brand-navy);
 
   --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive-foreground: var(--brand-white);
 
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 212.7 26.8% 83.9%;
-  --sidebar-background: 240 5.9% 10%;
-  --sidebar-foreground: 240 4.8% 95.9%;
-  --sidebar-primary: 224.3 76.3% 48%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 240 3.7% 15.9%;
-  --sidebar-accent-foreground: 240 4.8% 95.9%;
-  --sidebar-border: 240 3.7% 15.9%;
-  --sidebar-ring: 217.2 91.2% 59.8%;
+  --border: 210 50% 25%;
+  --input: 210 50% 25%;
+  --ring: var(--brand-pink);
+
+  --sidebar-background: 210 100% 10%;
+  --sidebar-foreground: var(--brand-white);
+  --sidebar-primary: var(--brand-pink);
+  --sidebar-primary-foreground: var(--brand-navy);
+  --sidebar-accent: 210 100% 20%;
+  --sidebar-accent-foreground: var(--brand-white);
+  --sidebar-border: 210 50% 25%;
+  --sidebar-ring: var(--brand-pink);
 }
 
 @theme {
@@ -168,28 +185,140 @@ All colors MUST be HSL.
   border-color: hsl(var(--border));
 }
 
+/* ============================================
+ * GLOBAL BASE STYLES
+ * ============================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
   font-feature-settings: "rlig" 1, "calt" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  margin: 0;
+  padding: 0;
 }
 
-/* Minimal, clean typography */
+/* ============================================
+ * TYPOGRAPHY SYSTEM
+ * ============================================ */
+
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  letter-spacing: -0.025em;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: hsl(var(--foreground));
+  line-height: 1.2;
+  margin: 0;
 }
 
-/* Clean button styles */
+h1 {
+  font-size: 48px;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+h6 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+p {
+  margin: 0 0 16px 0;
+  line-height: 1.6;
+}
+
+a {
+  color: hsl(var(--primary));
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: hsl(var(--accent));
+}
+
+/* Script font class for elegant headings */
+.font-script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* ============================================
+ * COMPONENT DEFAULTS
+ * ============================================ */
+
 button {
-  font-weight: 500;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
 }
 
-/* Subtle shadows for depth */
+input, textarea, select {
+  font-family: var(--font-body);
+  font-size: 16px;
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  padding: 12px 16px;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: hsl(var(--ring));
+  box-shadow: 0 0 0 2px hsla(var(--ring) / 0.1);
+}
+
+/* ============================================
+ * CARD & SHADOW SYSTEM
+ * ============================================ */
+
+.card-shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-shadow-hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
 .shadow-sm {
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
@@ -200,4 +329,45 @@ button {
 
 .shadow-md {
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Pink button shadow */
+.button-shadow {
+  box-shadow: 0 2px 8px rgba(248, 198, 208, 0.3);
+}
+
+/* ============================================
+ * UTILITY CLASSES
+ * ============================================ */
+
+.container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-padding {
+  padding: 80px 24px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .section-padding {
+    padding: 48px 16px;
+  }
 }

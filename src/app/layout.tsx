@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "Where Balloons Make Memories | Lubbock Balloon Decor & Event Design",
+  description: "Custom balloon installations for birthdays, weddings, corporate events, and celebrations in Lubbock, Texas. Professional balloon artistry that creates unforgettable moments.",
 };
 
 export default function RootLayout({
