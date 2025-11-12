@@ -12,13 +12,14 @@ interface ColorPreset {
   };
 }
 
+// Synchronized with globals.css :root variables
 const colorPresets: ColorPreset[] = [
   {
     name: 'Classic Pink',
     colors: {
-      pink: '330 100% 89%',
-      pinkDark: '330 100% 75%',
-      accent: '350 82% 77%',
+      pink: '330 100% 89%',        // Matches --brand-pink in globals.css
+      pinkDark: '330 100% 75%',    // Matches --brand-pink-dark in globals.css
+      accent: '350 82% 77%',       // Matches --brand-accent in globals.css
     },
   },
   {

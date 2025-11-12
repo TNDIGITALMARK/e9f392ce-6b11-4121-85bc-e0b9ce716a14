@@ -79,6 +79,12 @@ export function Header() {
             >
               Contact
             </a>
+            <Link
+              href="/builder"
+              className="text-white hover:text-[#ffc9eb] transition-colors duration-200 text-sm font-medium uppercase tracking-wide relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#ffc9eb] after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Code Builder
+            </Link>
           </nav>
 
           {/* Get Quote CTA Button */}
@@ -146,6 +152,13 @@ export function Header() {
           >
             Contact
           </a>
+          <Link
+            href="/builder"
+            className="text-white hover:text-[#ffc9eb] transition-colors duration-200 text-sm font-medium uppercase tracking-wide"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Code Builder
+          </Link>
           <a
             href="#contact"
             onClick={(e) => handleSmoothScroll(e, '#contact')}
