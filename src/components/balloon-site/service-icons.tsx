@@ -56,15 +56,20 @@ export function ServiceIcons() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-16 bg-white">
+    <section ref={sectionRef} id="services" className="py-20 bg-white scroll-mt-20">
       <div className="container-custom">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-black">Our Services</h2>
+        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          From intimate gatherings to grand celebrations, we bring your vision to life
+        </p>
+
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <div
                 key={index}
-                className={`flex flex-col items-center text-center group cursor-pointer transition-all duration-500 ${
+                className={`flex flex-col items-center text-center group cursor-pointer transition-all duration-500 ease-in-out ${
                   isVisible
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-6'
@@ -74,14 +79,14 @@ export function ServiceIcons() {
                 tabIndex={0}
                 aria-label={`${service.label}: ${service.description}`}
               >
-                <div className="w-16 h-16 mb-4 rounded-full bg-[hsl(var(--brand-pink-tint))] flex items-center justify-center group-hover:bg-[hsl(var(--brand-pink))] transition-all duration-300 group-hover:scale-110 group-focus:scale-110 group-focus:ring-2 group-focus:ring-[hsl(var(--brand-pink))] group-focus:ring-offset-2">
+                <div className="w-20 h-20 mb-4 rounded-full bg-[#ffc9eb]/30 flex items-center justify-center group-hover:bg-[#ffc9eb] transition-all duration-300 group-hover:scale-110 group-focus:scale-110 group-focus:ring-2 group-focus:ring-[#f78da7] group-focus:ring-offset-2">
                   <Icon
-                    size={32}
-                    className="text-[hsl(var(--brand-navy))] group-hover:text-white transition-colors duration-300"
+                    size={36}
+                    className="text-black group-hover:text-black transition-colors duration-300"
                     aria-hidden="true"
                   />
                 </div>
-                <h3 className="text-sm font-bold uppercase tracking-wide text-[hsl(var(--brand-navy))] mb-2 group-hover:text-[hsl(var(--brand-pink))] transition-colors duration-300">
+                <h3 className="text-sm font-bold uppercase tracking-wide text-black mb-2 group-hover:text-[#f78da7] transition-colors duration-300">
                   {service.label}
                 </h3>
                 <p className="text-xs text-gray-600 hidden md:block transition-opacity duration-300 group-hover:opacity-80">

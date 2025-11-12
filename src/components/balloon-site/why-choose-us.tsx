@@ -55,15 +55,15 @@ export function WhyChooseUs() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="about" className="py-20 bg-[hsl(var(--brand-pink-light))] scroll-mt-20">
+    <section ref={sectionRef} id="about" className="py-20 scroll-mt-20" style={{ backgroundColor: '#ffc9eb' }}>
       <div className="container-custom">
-        <div className={`text-center mb-16 transition-all duration-700 ${
+        <div className={`text-center mb-16 transition-all duration-700 ease-in-out ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
         }`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-[hsl(var(--brand-navy))] mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
             WHY CHOOSE US
           </h2>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          <p className="text-lg text-black/80 max-w-2xl mx-auto">
             We bring your celebration dreams to life with attention to detail and creative flair.
           </p>
         </div>
@@ -74,20 +74,23 @@ export function WhyChooseUs() {
             return (
               <div
                 key={index}
-                className={`bg-white rounded-lg p-8 card-shadow hover:card-shadow-hover transition-all duration-500 transform hover:-translate-y-2 ${
+                className={`bg-white rounded-lg p-8 transition-all duration-500 ease-in-out transform hover:-translate-y-2 ${
                   isVisible
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-8'
                 }`}
-                style={{ transitionDelay: `${index * 150}ms` }}
+                style={{
+                  transitionDelay: `${index * 150}ms`,
+                  boxShadow: '6px 6px 9px rgba(0, 0, 0, 0.2)'
+                }}
               >
-                <div className="w-16 h-16 mb-6 rounded-full bg-[hsl(var(--brand-pink-tint))] flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                  <Icon size={32} className="text-[hsl(var(--brand-navy))]" aria-hidden="true" />
+                <div className="w-16 h-16 mb-6 rounded-full bg-[#ffc9eb]/50 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                  <Icon size={32} className="text-black" aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-bold text-[hsl(var(--brand-navy))] mb-4 uppercase tracking-wide">
+                <h3 className="text-xl font-bold text-black mb-4 uppercase tracking-wide">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                <p className="text-gray-700 leading-relaxed">{feature.description}</p>
               </div>
             );
           })}

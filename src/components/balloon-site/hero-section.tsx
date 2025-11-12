@@ -12,66 +12,66 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0">
-        <Image
-          src="/generated/hero-balloons.png"
-          alt="Elegant balloon installation"
-          fill
-          className="object-cover"
-          priority
-        />
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--brand-navy))]/40 via-[hsl(var(--brand-navy))]/30 to-[hsl(var(--brand-navy))]/50" />
+    <section
+      className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center overflow-hidden"
+      style={{ backgroundColor: '#ffc9eb' }}
+    >
+      {/* Background Pattern or Image */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 20% 80%, rgba(255,255,255,0.4) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.4) 0%, transparent 50%)',
+        }} />
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 text-center text-white px-6 max-w-4xl">
+      <div className="relative z-10 text-center px-6 max-w-4xl py-20">
         <h1 className="mb-6">
           <span
-            className={`font-script text-5xl md:text-7xl block mb-2 text-[hsl(var(--brand-pink))] transition-all duration-700 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+            className={`font-script text-5xl md:text-7xl block mb-2 text-black transition-all duration-1000 ease-in-out ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
             }`}
+            style={{ animationDelay: '0ms' }}
           >
-            Where Balloons Make
+            West Texas Balloons
           </span>
           <span
-            className={`font-display text-6xl md:text-8xl font-bold block tracking-tight transition-all duration-700 delay-200 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+            className={`font-display text-4xl md:text-6xl font-bold block tracking-tight text-black transition-all duration-1000 ease-in-out delay-200 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
             }`}
           >
-            MEMORIES
+            & RENTALS
           </span>
         </h1>
 
         <p
-          className={`text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed transition-all duration-700 delay-300 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          className={`text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed text-black/90 transition-all duration-1000 ease-in-out delay-300 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          Creating magical moments one balloon at a time. Serving Lubbock celebrations since 2019.
+          Creating unforgettable celebrations with stunning balloon designs and quality party rentals
         </p>
 
         <div
-          className={`transition-all duration-700 delay-500 ${
+          className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-1000 ease-in-out delay-500 ${
             isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           }`}
         >
           <Link
             href="#contact"
-            className="inline-block bg-[hsl(var(--brand-pink))] text-white px-10 py-4 rounded-lg font-semibold text-sm uppercase tracking-wide hover:bg-[hsl(345,76%,82%)] transition-all duration-300 button-shadow hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[hsl(var(--brand-pink))] focus:ring-offset-2"
-            aria-label="Contact us to plan your event"
+            className="inline-block bg-[#32373c] text-white px-8 py-4 rounded-lg font-semibold text-sm tracking-wide hover:bg-black transition-all duration-300 hover:translate-y-[-2px]"
+            style={{ boxShadow: '6px 6px 9px rgba(0, 0, 0, 0.2)' }}
+            aria-label="Book your event"
           >
-            Plan Your Event
+            BOOK YOUR EVENT
           </Link>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex items-start justify-center p-2" aria-hidden="true">
-          <div className="w-1 h-2 bg-white rounded-full"></div>
+          <Link
+            href="#gallery"
+            className="inline-block bg-white text-black px-8 py-4 rounded-lg font-semibold text-sm tracking-wide hover:bg-gray-50 transition-all duration-300 hover:translate-y-[-2px]"
+            style={{ boxShadow: '6px 6px 9px rgba(0, 0, 0, 0.15)' }}
+            aria-label="View our gallery"
+          >
+            VIEW GALLERY
+          </Link>
         </div>
       </div>
     </section>

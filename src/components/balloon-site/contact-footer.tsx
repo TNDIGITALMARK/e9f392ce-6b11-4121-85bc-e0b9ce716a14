@@ -47,7 +47,7 @@ export function ContactFooter() {
       <section className="py-20 bg-white scroll-mt-20" id="contact">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[hsl(var(--brand-navy))] mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
               READY TO CELEBRATE?
             </h2>
             <p className="text-xl text-gray-700 max-w-2xl mx-auto">
@@ -57,8 +57,8 @@ export function ContactFooter() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-[hsl(var(--brand-pink-light))] p-8 rounded-lg card-shadow">
-              <h3 className="text-2xl font-bold text-[hsl(var(--brand-navy))] mb-6">
+            <div className="bg-[#ffc9eb]/30 p-8 rounded-lg" style={{ boxShadow: '6px 6px 9px rgba(0, 0, 0, 0.2)' }}>
+              <h3 className="text-2xl font-bold text-black mb-6">
                 Get Your Free Quote
               </h3>
 
@@ -76,7 +76,7 @@ export function ContactFooter() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-semibold text-[hsl(var(--brand-navy))] mb-2"
+                      className="block text-sm font-semibold text-black mb-2"
                     >
                       Name *
                     </label>
@@ -87,7 +87,7 @@ export function ContactFooter() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[hsl(var(--brand-pink))] focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f78da7] focus:border-transparent"
                     />
                   </div>
 
@@ -189,7 +189,8 @@ export function ContactFooter() {
 
                   <button
                     type="submit"
-                    className="w-full bg-[hsl(var(--brand-pink))] text-white px-8 py-4 rounded-lg font-semibold text-sm uppercase tracking-wide hover:bg-[hsl(345,76%,82%)] transition-all duration-200 button-shadow transform hover:scale-105"
+                    className="w-full bg-[#32373c] text-white px-8 py-4 rounded-lg font-semibold text-sm uppercase tracking-wide hover:bg-black transition-all duration-300 ease-in-out transform hover:translate-y-[-2px]"
+                    style={{ boxShadow: '6px 6px 9px rgba(0, 0, 0, 0.2)' }}
                   >
                     Request Quote
                   </button>
@@ -200,7 +201,7 @@ export function ContactFooter() {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-[hsl(var(--brand-navy))] mb-6">
+                <h3 className="text-2xl font-bold text-black mb-6">
                   Get In Touch
                 </h3>
                 <p className="text-gray-700 mb-8 leading-relaxed">
@@ -210,16 +211,16 @@ export function ContactFooter() {
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-[hsl(var(--brand-pink))] rounded-full flex items-center justify-center flex-shrink-0">
-                    <Phone size={24} className="text-white" />
+                  <div className="w-12 h-12 bg-[#ffc9eb] rounded-full flex items-center justify-center flex-shrink-0">
+                    <Phone size={24} className="text-black" />
                   </div>
                   <div>
-                    <p className="font-semibold text-[hsl(var(--brand-navy))] mb-1">
+                    <p className="font-semibold text-black mb-1">
                       Phone
                     </p>
                     <a
                       href="tel:8065557278"
-                      className="text-gray-700 hover:text-[hsl(var(--brand-pink))] transition-colors"
+                      className="text-gray-700 hover:text-[#f78da7] transition-colors"
                     >
                       (806) 555-PARTY
                     </a>
@@ -227,39 +228,39 @@ export function ContactFooter() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-[hsl(var(--brand-pink))] rounded-full flex items-center justify-center flex-shrink-0">
-                    <Mail size={24} className="text-white" />
+                  <div className="w-12 h-12 bg-[#ffc9eb] rounded-full flex items-center justify-center flex-shrink-0">
+                    <Mail size={24} className="text-black" />
                   </div>
                   <div>
-                    <p className="font-semibold text-[hsl(var(--brand-navy))] mb-1">
+                    <p className="font-semibold text-black mb-1">
                       Email
                     </p>
                     <a
-                      href="mailto:hello@whereballoonsmakememories.com"
-                      className="text-gray-700 hover:text-[hsl(var(--brand-pink))] transition-colors"
+                      href="mailto:info@westtexasballoons.com"
+                      className="text-gray-700 hover:text-[#f78da7] transition-colors"
                     >
-                      hello@whereballoonsmakememories.com
+                      info@westtexasballoons.com
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-[hsl(var(--brand-pink))] rounded-full flex items-center justify-center flex-shrink-0">
-                    <MapPin size={24} className="text-white" />
+                  <div className="w-12 h-12 bg-[#ffc9eb] rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPin size={24} className="text-black" />
                   </div>
                   <div>
-                    <p className="font-semibold text-[hsl(var(--brand-navy))] mb-1">
+                    <p className="font-semibold text-black mb-1">
                       Service Area
                     </p>
                     <p className="text-gray-700">
-                      Lubbock, Texas & Surrounding Areas
+                      West Texas & Surrounding Areas
                     </p>
                   </div>
                 </div>
               </div>
 
               <div className="pt-8 border-t border-gray-200">
-                <p className="font-semibold text-[hsl(var(--brand-navy))] mb-4">
+                <p className="font-semibold text-black mb-4">
                   Follow Us
                 </p>
                 <div className="flex space-x-4">
@@ -267,22 +268,22 @@ export function ContactFooter() {
                     href="https://facebook.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-[hsl(var(--brand-pink-tint))] hover:bg-[hsl(var(--brand-pink))] rounded-full flex items-center justify-center transition-all duration-200 group"
+                    className="w-12 h-12 bg-[#ffc9eb]/50 hover:bg-[#ffc9eb] rounded-full flex items-center justify-center transition-all duration-200 group"
                   >
                     <Facebook
                       size={24}
-                      className="text-[hsl(var(--brand-navy))] group-hover:text-white transition-colors"
+                      className="text-black transition-colors"
                     />
                   </a>
                   <a
                     href="https://instagram.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-[hsl(var(--brand-pink-tint))] hover:bg-[hsl(var(--brand-pink))] rounded-full flex items-center justify-center transition-all duration-200 group"
+                    className="w-12 h-12 bg-[#ffc9eb]/50 hover:bg-[#ffc9eb] rounded-full flex items-center justify-center transition-all duration-200 group"
                   >
                     <Instagram
                       size={24}
-                      className="text-[hsl(var(--brand-navy))] group-hover:text-white transition-colors"
+                      className="text-black transition-colors"
                     />
                   </a>
                 </div>
@@ -293,15 +294,15 @@ export function ContactFooter() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[hsl(var(--brand-navy))] text-white py-12">
+      <footer className="bg-black text-white py-12">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <h4 className="font-script text-2xl mb-2">
-                Where Balloons Make Memories
+                West Texas Balloons
               </h4>
               <p className="text-white/70 text-sm">
-                Creating magical moments for Lubbock celebrations since 2019.
+                Creating magical moments for West Texas celebrations since 2015.
               </p>
             </div>
 
@@ -311,27 +312,27 @@ export function ContactFooter() {
               </h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="/" className="text-white/70 hover:text-[hsl(var(--brand-pink))] transition-colors">
+                  <Link href="/" className="text-white/70 hover:text-[#ffc9eb] transition-colors">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services" className="text-white/70 hover:text-[hsl(var(--brand-pink))] transition-colors">
+                  <Link href="#services" className="text-white/70 hover:text-[#ffc9eb] transition-colors">
                     Services
                   </Link>
                 </li>
                 <li>
-                  <Link href="/gallery" className="text-white/70 hover:text-[hsl(var(--brand-pink))] transition-colors">
+                  <Link href="#gallery" className="text-white/70 hover:text-[#ffc9eb] transition-colors">
                     Gallery
                   </Link>
                 </li>
                 <li>
-                  <Link href="#about" className="text-white/70 hover:text-[hsl(var(--brand-pink))] transition-colors">
-                    About Us
+                  <Link href="#testimonials" className="text-white/70 hover:text-[#ffc9eb] transition-colors">
+                    Testimonials
                   </Link>
                 </li>
                 <li>
-                  <Link href="#contact" className="text-white/70 hover:text-[hsl(var(--brand-pink))] transition-colors">
+                  <Link href="#contact" className="text-white/70 hover:text-[#ffc9eb] transition-colors">
                     Contact
                   </Link>
                 </li>
@@ -344,14 +345,14 @@ export function ContactFooter() {
               </h4>
               <ul className="space-y-2 text-sm text-white/70">
                 <li>(806) 555-PARTY</li>
-                <li>hello@whereballoonsmakememories.com</li>
-                <li>Lubbock, Texas</li>
+                <li>info@westtexasballoons.com</li>
+                <li>West Texas</li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-white/20 pt-8 text-center text-sm text-white/60">
-            <p>&copy; {new Date().getFullYear()} Where Balloons Make Memories. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} West Texas Balloons & Rentals. All rights reserved.</p>
           </div>
         </div>
       </footer>

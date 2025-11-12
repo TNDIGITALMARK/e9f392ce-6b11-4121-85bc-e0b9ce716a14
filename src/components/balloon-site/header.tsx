@@ -30,7 +30,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-[hsl(var(--brand-navy))] text-white transition-shadow duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-black text-white transition-shadow duration-300 ${
         isScrolled ? 'shadow-lg' : 'shadow-md'
       }`}
     >
@@ -39,9 +39,9 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
             <div className="text-xl font-bold tracking-wide transition-transform duration-300 group-hover:scale-105">
-              <span className="font-script text-2xl text-[hsl(var(--brand-pink))]">WHERE BALLOONS</span>
+              <span className="font-script text-2xl text-[#ffc9eb]">West Texas</span>
               <br />
-              <span className="text-sm uppercase tracking-widest">MAKE MEMORIES</span>
+              <span className="text-sm uppercase tracking-widest">BALLOONS & RENTALS</span>
             </div>
           </Link>
 
@@ -49,33 +49,35 @@ export function Header() {
           <nav className="hidden md:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
             <Link
               href="/"
-              className="text-white hover:text-[hsl(var(--brand-pink))] transition-colors duration-200 text-sm font-medium uppercase tracking-wide relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[hsl(var(--brand-pink))] after:transition-all after:duration-300 hover:after:w-full"
+              className="text-white hover:text-[#ffc9eb] transition-colors duration-200 text-sm font-medium uppercase tracking-wide relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#ffc9eb] after:transition-all after:duration-300 hover:after:w-full"
             >
               Home
             </Link>
-            <Link
-              href="/services"
-              className="text-white hover:text-[hsl(var(--brand-pink))] transition-colors duration-200 text-sm font-medium uppercase tracking-wide relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[hsl(var(--brand-pink))] after:transition-all after:duration-300 hover:after:w-full"
+            <a
+              href="#services"
+              onClick={(e) => handleSmoothScroll(e, '#services')}
+              className="text-white hover:text-[#ffc9eb] transition-colors duration-200 text-sm font-medium uppercase tracking-wide relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#ffc9eb] after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
             >
               Services
-            </Link>
-            <Link
-              href="/gallery"
-              className="text-white hover:text-[hsl(var(--brand-pink))] transition-colors duration-200 text-sm font-medium uppercase tracking-wide relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[hsl(var(--brand-pink))] after:transition-all after:duration-300 hover:after:w-full"
+            </a>
+            <a
+              href="#gallery"
+              onClick={(e) => handleSmoothScroll(e, '#gallery')}
+              className="text-white hover:text-[#ffc9eb] transition-colors duration-200 text-sm font-medium uppercase tracking-wide relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#ffc9eb] after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
             >
               Gallery
-            </Link>
+            </a>
             <a
-              href="#about"
-              onClick={(e) => handleSmoothScroll(e, '#about')}
-              className="text-white hover:text-[hsl(var(--brand-pink))] transition-colors duration-200 text-sm font-medium uppercase tracking-wide relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[hsl(var(--brand-pink))] after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
+              href="#testimonials"
+              onClick={(e) => handleSmoothScroll(e, '#testimonials')}
+              className="text-white hover:text-[#ffc9eb] transition-colors duration-200 text-sm font-medium uppercase tracking-wide relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#ffc9eb] after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
             >
-              About Us
+              About
             </a>
             <a
               href="#contact"
               onClick={(e) => handleSmoothScroll(e, '#contact')}
-              className="text-white hover:text-[hsl(var(--brand-pink))] transition-colors duration-200 text-sm font-medium uppercase tracking-wide relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[hsl(var(--brand-pink))] after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
+              className="text-white hover:text-[#ffc9eb] transition-colors duration-200 text-sm font-medium uppercase tracking-wide relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[#ffc9eb] after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
             >
               Contact
             </a>
@@ -85,7 +87,8 @@ export function Header() {
           <a
             href="#contact"
             onClick={(e) => handleSmoothScroll(e, '#contact')}
-            className="hidden md:inline-block bg-[hsl(var(--brand-pink))] text-white px-8 py-3 rounded-lg font-semibold text-sm uppercase tracking-wide hover:bg-[hsl(345,76%,82%)] transition-all duration-300 button-shadow hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[hsl(var(--brand-pink))] focus:ring-offset-2 cursor-pointer"
+            className="hidden md:inline-block bg-[#ffc9eb] text-black px-8 py-3 rounded-lg font-semibold text-sm uppercase tracking-wide hover:bg-[#f78da7] transition-all duration-300 ease-in-out hover:translate-y-[-2px] focus:outline-none focus:ring-2 focus:ring-[#f78da7] focus:ring-offset-2 cursor-pointer"
+            style={{ boxShadow: '6px 6px 9px rgba(0, 0, 0, 0.2)' }}
             aria-label="Get a quote for your event"
           >
             Get Quote
@@ -105,50 +108,51 @@ export function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden bg-[hsl(var(--brand-navy))] border-t border-white/10 overflow-hidden transition-all duration-300 ${
+        className={`md:hidden bg-black border-t border-white/10 overflow-hidden transition-all duration-300 ${
           mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <nav className="flex flex-col space-y-4 p-6" role="navigation" aria-label="Mobile navigation">
           <Link
             href="/"
-            className="text-white hover:text-[hsl(var(--brand-pink))] transition-colors duration-200 text-sm font-medium uppercase tracking-wide"
+            className="text-white hover:text-[#ffc9eb] transition-colors duration-200 text-sm font-medium uppercase tracking-wide"
             onClick={() => setMobileMenuOpen(false)}
           >
             Home
           </Link>
-          <Link
-            href="/services"
-            className="text-white hover:text-[hsl(var(--brand-pink))] transition-colors duration-200 text-sm font-medium uppercase tracking-wide"
-            onClick={() => setMobileMenuOpen(false)}
+          <a
+            href="#services"
+            onClick={(e) => handleSmoothScroll(e, '#services')}
+            className="text-white hover:text-[#ffc9eb] transition-colors duration-200 text-sm font-medium uppercase tracking-wide cursor-pointer"
           >
             Services
-          </Link>
-          <Link
-            href="/gallery"
-            className="text-white hover:text-[hsl(var(--brand-pink))] transition-colors duration-200 text-sm font-medium uppercase tracking-wide"
-            onClick={() => setMobileMenuOpen(false)}
+          </a>
+          <a
+            href="#gallery"
+            onClick={(e) => handleSmoothScroll(e, '#gallery')}
+            className="text-white hover:text-[#ffc9eb] transition-colors duration-200 text-sm font-medium uppercase tracking-wide cursor-pointer"
           >
             Gallery
-          </Link>
+          </a>
           <a
-            href="#about"
-            onClick={(e) => handleSmoothScroll(e, '#about')}
-            className="text-white hover:text-[hsl(var(--brand-pink))] transition-colors duration-200 text-sm font-medium uppercase tracking-wide cursor-pointer"
+            href="#testimonials"
+            onClick={(e) => handleSmoothScroll(e, '#testimonials')}
+            className="text-white hover:text-[#ffc9eb] transition-colors duration-200 text-sm font-medium uppercase tracking-wide cursor-pointer"
           >
-            About Us
+            About
           </a>
           <a
             href="#contact"
             onClick={(e) => handleSmoothScroll(e, '#contact')}
-            className="text-white hover:text-[hsl(var(--brand-pink))] transition-colors duration-200 text-sm font-medium uppercase tracking-wide cursor-pointer"
+            className="text-white hover:text-[#ffc9eb] transition-colors duration-200 text-sm font-medium uppercase tracking-wide cursor-pointer"
           >
             Contact
           </a>
           <a
             href="#contact"
             onClick={(e) => handleSmoothScroll(e, '#contact')}
-            className="bg-[hsl(var(--brand-pink))] text-white px-8 py-3 rounded-lg font-semibold text-sm uppercase tracking-wide text-center button-shadow hover:bg-[hsl(345,76%,82%)] transition-all duration-200 cursor-pointer"
+            className="bg-[#ffc9eb] text-black px-8 py-3 rounded-lg font-semibold text-sm uppercase tracking-wide text-center hover:bg-[#f78da7] transition-all duration-200 cursor-pointer"
+            style={{ boxShadow: '6px 6px 9px rgba(0, 0, 0, 0.2)' }}
           >
             Get Quote
           </a>

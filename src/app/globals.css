@@ -2,21 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 /* ============================================
- * WHERE BALLOONS MAKE MEMORIES - DESIGN SYSTEM
- * Brand Colors: Navy #001F3F, White #FFFFFF, Black #000000, Soft Pink #F8C6D0
+ * WEST TEXAS BALLOONS DESIGN SYSTEM
+ * Primary: Soft Pink #ffc9eb, Black #000000, White #FFFFFF
+ * Playful, Feminine, Event-Focused Aesthetic
  * ============================================ */
 
 :root {
-  /* Brand Color System - Where Balloons Make Memories */
-  --brand-navy: 210 100% 12%;        /* #001F3F - Headers, footers, primary dark */
-  --brand-white: 0 0% 100%;          /* #FFFFFF - Content areas, cards */
-  --brand-black: 0 0% 0%;            /* #000000 - Body text */
-  --brand-pink: 345 76% 87%;         /* #F8C6D0 - CTA buttons, accents */
-  --brand-pink-light: 345 76% 95%;   /* Light pink backgrounds */
-  --brand-pink-tint: 345 76% 97%;    /* Subtle pink tints */
+  /* West Texas Balloons Brand Colors */
+  --brand-pink: 330 100% 89%;        /* #ffc9eb - Primary background, hero sections */
+  --brand-pink-dark: 330 100% 75%;   /* Darker pink for depth */
+  --brand-white: 0 0% 100%;          /* #FFFFFF - Cards, content areas */
+  --brand-black: 0 0% 0%;            /* #000000 - Text, buttons */
+  --brand-gray: 207 6% 74%;          /* #abb8c3 - Subtle borders, muted elements */
+  --brand-accent: 350 82% 77%;       /* #f78da7 - Accent pink */
+  --brand-red: 0 61% 50%;            /* #cf2e2e - Vivid accents */
 
   /* Mapped to theme variables */
-  --background: var(--brand-white);
+  --background: var(--brand-pink);
   --foreground: var(--brand-black);
 
   /* Cards - White with subtle shadow */
@@ -27,88 +29,69 @@
   --popover: var(--brand-white);
   --popover-foreground: var(--brand-black);
 
-  /* Primary: Navy blue for headers/footers */
-  --primary: var(--brand-navy);
+  /* Primary: Black for buttons and headings */
+  --primary: var(--brand-black);
   --primary-foreground: var(--brand-white);
 
-  /* Secondary: Soft pink for accents */
+  /* Secondary: Soft pink for backgrounds */
   --secondary: var(--brand-pink);
-  --secondary-foreground: var(--brand-white);
+  --secondary-foreground: var(--brand-black);
 
-  /* Muted: Light backgrounds */
-  --muted: var(--brand-pink-tint);
-  --muted-foreground: 210 15% 40%;
+  /* Muted: Light pink for subtle sections */
+  --muted: 330 100% 95%;
+  --muted-foreground: 0 0% 40%;
 
-  /* Accent: Pink for CTAs and highlights */
-  --accent: var(--brand-pink);
+  /* Accent: Pink accent for CTAs */
+  --accent: var(--brand-accent);
   --accent-foreground: var(--brand-white);
 
   /* Destructive: Red for errors */
-  --destructive: 0 70% 50%;
+  --destructive: var(--brand-red);
   --destructive-foreground: var(--brand-white);
 
   /* Borders: Subtle gray */
-  --border: 0 0% 90%;
+  --border: var(--brand-gray);
   --input: 0 0% 90%;
-  --ring: var(--brand-pink);
+  --ring: var(--brand-accent);
 
-  /* Border Radius - 8px standard */
-  --radius: 0.5rem;
-
-  /* Sidebar (if needed) */
-  --sidebar-background: var(--brand-navy);
-  --sidebar-foreground: var(--brand-white);
-  --sidebar-primary: var(--brand-pink);
-  --sidebar-primary-foreground: var(--brand-white);
-  --sidebar-accent: 210 100% 20%;
-  --sidebar-accent-foreground: var(--brand-white);
-  --sidebar-border: 210 50% 25%;
-  --sidebar-ring: var(--brand-pink);
+  /* Border Radius - 0.5em standard */
+  --radius: 0.5em;
 
   /* Typography Variables */
   --font-script: 'Pacifico', cursive;
   --font-display: 'Poppins', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .dark {
-  /* Dark mode uses same brand colors with adjusted contrast */
-  --background: var(--brand-navy);
+  /* Dark mode keeps pink aesthetic with adjusted contrast */
+  --background: 0 0% 10%;
   --foreground: var(--brand-white);
 
-  --card: 210 100% 15%;
+  --card: 0 0% 15%;
   --card-foreground: var(--brand-white);
 
-  --popover: 210 100% 15%;
+  --popover: 0 0% 15%;
   --popover-foreground: var(--brand-white);
 
-  --primary: var(--brand-pink);
-  --primary-foreground: var(--brand-navy);
+  --primary: var(--brand-accent);
+  --primary-foreground: var(--brand-white);
 
-  --secondary: 210 100% 20%;
+  --secondary: 330 100% 30%;
   --secondary-foreground: var(--brand-white);
 
-  --muted: 210 50% 25%;
-  --muted-foreground: 210 15% 70%;
+  --muted: 0 0% 25%;
+  --muted-foreground: 0 0% 70%;
 
-  --accent: var(--brand-pink);
-  --accent-foreground: var(--brand-navy);
+  --accent: var(--brand-accent);
+  --accent-foreground: var(--brand-white);
 
-  --destructive: 0 62.8% 30.6%;
+  --destructive: var(--brand-red);
   --destructive-foreground: var(--brand-white);
 
-  --border: 210 50% 25%;
-  --input: 210 50% 25%;
-  --ring: var(--brand-pink);
-
-  --sidebar-background: 210 100% 10%;
-  --sidebar-foreground: var(--brand-white);
-  --sidebar-primary: var(--brand-pink);
-  --sidebar-primary-foreground: var(--brand-navy);
-  --sidebar-accent: 210 100% 20%;
-  --sidebar-accent-foreground: var(--brand-white);
-  --sidebar-border: 210 50% 25%;
-  --sidebar-ring: var(--brand-pink);
+  --border: 0 0% 25%;
+  --input: 0 0% 25%;
+  --ring: var(--brand-accent);
 }
 
 @theme {
@@ -285,11 +268,20 @@ button {
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 14px;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
   cursor: pointer;
   border: none;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease-in-out;
+  background-color: #32373c;
+  color: white;
+  padding: calc(0.667em + 2px) calc(1.333em + 2px);
+  border-radius: var(--radius);
+}
+
+button:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.2);
 }
 
 input, textarea, select {
