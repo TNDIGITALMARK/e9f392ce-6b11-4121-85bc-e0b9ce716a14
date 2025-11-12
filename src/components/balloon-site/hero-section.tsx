@@ -32,14 +32,7 @@ export function HeroSection() {
             }`}
             style={{ animationDelay: '0ms' }}
           >
-            West Texas Balloons
-          </span>
-          <span
-            className={`font-display text-4xl md:text-6xl font-bold block tracking-tight text-black transition-all duration-1000 ease-in-out delay-200 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
-            }`}
-          >
-            & RENTALS
+            where balloons make memories
           </span>
         </h1>
 

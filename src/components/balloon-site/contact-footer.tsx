@@ -253,7 +253,7 @@ export function ContactFooter() {
                       Service Area
                     </p>
                     <p className="text-gray-700">
-                      West Texas & Surrounding Areas
+                      Lubbock & Surrounding Areas
                     </p>
                   </div>
                 </div>
@@ -299,10 +299,10 @@ export function ContactFooter() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <h4 className="font-script text-2xl mb-2">
-                West Texas Balloons
+                where balloons make memories
               </h4>
               <p className="text-white/70 text-sm">
-                Creating magical moments for West Texas celebrations since 2015.
+                Creating magical moments for celebrations since 2015.
               </p>
             </div>
 
@@ -345,14 +345,14 @@ export function ContactFooter() {
               </h4>
               <ul className="space-y-2 text-sm text-white/70">
                 <li>(806) 555-PARTY</li>
-                <li>info@westtexasballoons.com</li>
-                <li>West Texas</li>
+                <li>info@whereballoonsmakememories.com</li>
+                <li>Lubbock, Texas</li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-white/20 pt-8 text-center text-sm text-white/60">
-            <p>&copy; {new Date().getFullYear()} West Texas Balloons & Rentals. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} where balloons make memories. All rights reserved.</p>
           </div>
         </div>
       </footer>

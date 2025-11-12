@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Where Balloons Make Memories | Lubbock Balloon Decor & Event Design",
+  title: "where balloons make memories | Lubbock Balloon Decor & Event Design",
   description: "Custom balloon installations for birthdays, weddings, corporate events, and celebrations in Lubbock, Texas. Professional balloon artistry that creates unforgettable moments.",
 };
 

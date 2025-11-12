@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 /* ============================================
- * WEST TEXAS BALLOONS DESIGN SYSTEM
+ * WHERE BALLOONS MAKE MEMORIES DESIGN SYSTEM
  * Primary: Soft Pink #ffc9eb, Black #000000, White #FFFFFF
  * Playful, Feminine, Event-Focused Aesthetic
  * ============================================ */
 
 :root {
-  /* West Texas Balloons Brand Colors */
+  /* Brand Colors */
   --brand-pink: 330 100% 89%;        /* #ffc9eb - Primary background, hero sections */
   --brand-pink-dark: 330 100% 75%;   /* Darker pink for depth */
   --brand-white: 0 0% 100%;          /* #FFFFFF - Cards, content areas */

@@ -1,4 +1,6 @@
-# 07-18-2025-next.js-template
+# where balloons make memories
+
+A beautiful Next.js website for a balloon decoration and event planning business in Lubbock, Texas.
 
 ## SSR and Browser API Usage
 

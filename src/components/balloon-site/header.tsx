@@ -39,9 +39,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
             <div className="text-xl font-bold tracking-wide transition-transform duration-300 group-hover:scale-105">
-              <span className="font-script text-2xl text-[#ffc9eb]">West Texas</span>
-              <br />
-              <span className="text-sm uppercase tracking-widest">BALLOONS & RENTALS</span>
+              <span className="font-script text-2xl text-[#ffc9eb]">where balloons make memories</span>
             </div>
           </Link>
 

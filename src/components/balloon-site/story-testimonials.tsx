@@ -33,7 +33,7 @@ export function StoryTestimonials() {
               <div className="relative w-32 h-32 rounded-full overflow-hidden flex-shrink-0 border-4 border-white" style={{ boxShadow: '6px 6px 9px rgba(0, 0, 0, 0.2)' }}>
                 <Image
                   src="/generated/founder-photo.png"
-                  alt="West Texas Balloons Founder"
+                  alt="Founder of where balloons make memories"
                   fill
                   className="object-cover"
                 />
@@ -43,20 +43,20 @@ export function StoryTestimonials() {
                   OUR STORY
                 </h3>
                 <p className="text-black/80 font-semibold mb-2">
-                  Serving West Texas Since 2015
+                  Serving Lubbock Since 2015
                 </p>
               </div>
             </div>
 
             <div className="space-y-4 text-black/90 leading-relaxed">
               <p>
-                West Texas Balloons & Rentals began with a simple passion: creating joy through beautiful balloon artistry and quality party rentals. What started as a small venture quickly grew into West Texas's premier event decoration service.
+                Our journey began with a simple passion: creating joy through beautiful balloon artistry and quality party rentals. What started as a small venture quickly grew into Lubbock's premier event decoration service.
               </p>
               <p>
                 We discovered that balloons and thoughtful décor bring wonder to every celebration. Every installation we create is designed to spark excitement and create memorable moments that last long after the event ends.
               </p>
               <p>
-                Based in West Texas, we've had the honor of decorating hundreds of celebrations - from intimate baby showers to grand wedding receptions. Each event is a new opportunity to bring someone's vision to life.
+                Based in Lubbock, we've had the honor of decorating hundreds of celebrations - from intimate baby showers to grand wedding receptions. Each event is a new opportunity to bring someone's vision to life.
               </p>
               <p className="font-semibold text-black">
                 Let's make your next celebration unforgettable!
