@@ -3,11 +3,29 @@
 import { Baby, Briefcase, Cake, Heart, Users } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
+/**
+ * SERVICE ICONS SECTION - Displays service offerings in icon grid format
+ *
+ * CUSTOMIZATION GUIDE:
+ * - Edit services array below (lines 13-37) to add/remove/modify services
+ * - Change icons by importing from 'lucide-react' (see lucide.dev for icon options)
+ * - Line 68: Edit section title "Our Services"
+ * - Line 69: Edit section description
+ *
+ * TO ADD A NEW SERVICE:
+ * Copy this structure and add to the services array:
+ * {
+ *   icon: YourIconName,     ← Import from lucide-react
+ *   label: 'SERVICE NAME',  ← Service title (uppercase)
+ *   description: 'Brief description of service',
+ * },
+ */
+
 const services = [
   {
-    icon: Users,
-    label: 'ALL AGES',
-    description: 'Celebrations for every age group',
+    icon: Users,                           // ← EDIT: Change icon (import from lucide-react)
+    label: 'ALL AGES',                     // ← EDIT: Service name
+    description: 'Celebrations for every age group',  // ← EDIT: Description
   },
   {
     icon: Heart,
@@ -29,6 +47,7 @@ const services = [
     label: 'BIRTHDAYS',
     description: 'Memorable party decor',
   },
+  // ← ADD NEW SERVICES HERE by copying the structure above
 ];
 
 export function ServiceIcons() {
@@ -58,7 +77,10 @@ export function ServiceIcons() {
   return (
     <section ref={sectionRef} id="services" className="py-20 bg-white scroll-mt-20">
       <div className="container-custom">
+        {/* ← EDIT: Section title */}
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-black">Our Services</h2>
+
+        {/* ← EDIT: Section description */}
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
           From intimate gatherings to grand celebrations, we bring your vision to life
         </p>

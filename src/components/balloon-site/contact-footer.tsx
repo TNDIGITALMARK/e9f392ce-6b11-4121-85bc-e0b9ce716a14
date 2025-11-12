@@ -4,6 +4,24 @@ import Link from 'next/link';
 import { Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react';
 import { useState } from 'react';
 
+/**
+ * CONTACT & FOOTER SECTION - Contact form and footer information
+ *
+ * CUSTOMIZATION GUIDE:
+ * - Line 51: Edit "READY TO CELEBRATE?" headline
+ * - Line 54: Edit subheadline
+ * - Line 222-226: Edit phone number and display text
+ * - Line 239-243: Edit email address
+ * - Line 255-257: Edit service area text
+ * - Line 268-288: Edit social media links (Facebook, Instagram)
+ * - Line 302: Edit business tagline
+ * - Line 347-349: Edit contact info in footer
+ *
+ * TO CONNECT CONTACT FORM TO EMAIL:
+ * Option 1: Use Formspree (easiest) - Sign up at formspree.io, add action to <form> tag
+ * Option 2: Create API route - See EDITING_GUIDE.md for instructions
+ */
+
 export function ContactFooter() {
   const [formData, setFormData] = useState({
     name: '',
@@ -47,9 +65,12 @@ export function ContactFooter() {
       <section className="py-20 bg-white scroll-mt-20" id="contact">
         <div className="container-custom">
           <div className="text-center mb-16">
+            {/* ← EDIT: Contact section headline */}
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
               READY TO CELEBRATE?
             </h2>
+
+            {/* ← EDIT: Contact section subheadline */}
             <p className="text-xl text-gray-700 max-w-2xl mx-auto">
               Let's create unforgettable moments together
             </p>
@@ -218,6 +239,7 @@ export function ContactFooter() {
                     <p className="font-semibold text-black mb-1">
                       Phone
                     </p>
+                    {/* ← EDIT: Phone number (href and display text) */}
                     <a
                       href="tel:8065557278"
                       className="text-gray-700 hover:text-[#f78da7] transition-colors"
@@ -235,6 +257,7 @@ export function ContactFooter() {
                     <p className="font-semibold text-black mb-1">
                       Email
                     </p>
+                    {/* ← EDIT: Email address */}
                     <a
                       href="mailto:info@westtexasballoons.com"
                       className="text-gray-700 hover:text-[#f78da7] transition-colors"
@@ -252,6 +275,7 @@ export function ContactFooter() {
                     <p className="font-semibold text-black mb-1">
                       Service Area
                     </p>
+                    {/* ← EDIT: Service area/location text */}
                     <p className="text-gray-700">
                       Lubbock & Surrounding Areas
                     </p>
@@ -259,27 +283,33 @@ export function ContactFooter() {
                 </div>
               </div>
 
+              {/* Social Media Links */}
               <div className="pt-8 border-t border-gray-200">
                 <p className="font-semibold text-black mb-4">
                   Follow Us
                 </p>
                 <div className="flex space-x-4">
+                  {/* ← EDIT: Facebook link */}
                   <a
-                    href="https://facebook.com"
+                    href="https://facebook.com/yourpage"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-[#ffc9eb]/50 hover:bg-[#ffc9eb] rounded-full flex items-center justify-center transition-all duration-200 group"
+                    aria-label="Visit our Facebook page"
                   >
                     <Facebook
                       size={24}
                       className="text-black transition-colors"
                     />
                   </a>
+
+                  {/* ← EDIT: Instagram link */}
                   <a
-                    href="https://instagram.com"
+                    href="https://instagram.com/yourhandle"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-[#ffc9eb]/50 hover:bg-[#ffc9eb] rounded-full flex items-center justify-center transition-all duration-200 group"
+                    aria-label="Visit our Instagram profile"
                   >
                     <Instagram
                       size={24}
