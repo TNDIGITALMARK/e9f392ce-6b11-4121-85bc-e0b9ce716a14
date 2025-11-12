@@ -7,6 +7,7 @@ import { ZyloProvider } from "@/lib/zylo/provider";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { ColorCustomizer } from "@/components/balloon-site/color-customizer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -91,6 +92,7 @@ export default function RootLayout({
             >
               <TooltipProvider>
                 {children}
+                <ColorCustomizer />
                 <Toaster />
                 <Sonner />
               </TooltipProvider>

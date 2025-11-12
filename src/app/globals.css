@@ -13,6 +13,7 @@
   --brand-pink-dark: 330 100% 75%;   /* Darker pink for depth */
   --brand-white: 0 0% 100%;          /* #FFFFFF - Cards, content areas */
   --brand-black: 0 0% 0%;            /* #000000 - Text, buttons */
+  --brand-navy: 210 50% 15%;         /* Dark navy for contrast sections */
   --brand-gray: 207 6% 74%;          /* #abb8c3 - Subtle borders, muted elements */
   --brand-accent: 350 82% 77%;       /* #f78da7 - Accent pink */
   --brand-red: 0 61% 50%;            /* #cf2e2e - Vivid accents */
